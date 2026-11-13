@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <git
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff7f2;
+            color: #333;
+        }
+
+        header {
+            background: #ff8fa3;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: white;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: #ffe0e6;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: #e75480;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background: #ff6384;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .products {
+            padding: 40px 8%;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 32px;
+            color: #e75480;
+            margin-bottom: 30px;
+        }
+
+        .toy-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .toy-card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #ddd;
+            transition: 0.3s;
+        }
+
+        .toy-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .toy-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+        }
+
+        .toy-card h3 {
+            margin: 12px 0;
+        }
+
+        .price {
+            color: #e75480;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .toy-card button {
+            background: #ff8fa3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #ff8fa3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>🧸 Toy World</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Toys</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to Toy World!</h1>
+    <p>Discover Amazing Toys for Happy Kids.</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">
+        Shop Now
+    </button>
+</section>
+
+<section class="products" id="products">
+    <h2>Our Popular Toys</h2>
+
+    <div class="toy-container">
+
+        <div class="toy-card">
+            <img src="https://placehold.co/300x200?text=Teddy+Bear" alt="Teddy Bear">
+            <h3>Teddy Bear</h3>
+            <p class="price">Rs. 1500</p>
+            <button onclick="buyToy('Teddy Bear')">Buy Now</button>
+        </div>
+
+        <div class="toy-card">
+            <img src="https://placehold.co/300x200?text=Toy+Car" alt="Toy Car">
+            <h3>Racing Car</h3>
+            <p class="price">Rs. 1200</p>
+            <button onclick="buyToy('Racing Car')">Buy Now</button>
+        </div>
+
+        <div class="toy-card">
+            <img src="https://placehold.co/300x200?text=Building+Blocks" alt="Building Blocks">
+            <h3>Building Blocks</h3>
+            <p class="price">Rs. 2000</p>
+            <button onclick="buyToy('Building Blocks')">Buy Now</button>
+        </div>
+
+        <div class="toy-card">
+            <img src="https://placehold.co/300x200?text=Toy+Robot" alt="Toy Robot">
+            <h3>Toy Robot</h3>
+            <p class="price">Rs. 2500</p>
+            <button onclick="buyToy('Toy Robot')">Buy Now</button>
+        </div>
+
+    </div>
+</section>
+
+<footer id="contact">
+    <p>© 2026 Toy World | All Rights Reserved</p>
+    <p>Contact: toyworld@gmail.com</p>
+</footer>
+
+<script>
+    function buyToy(name) {
+        alert("Thank you for choosing " + name + "!");
+    }
+</script>
+
+</body>
+</html>
+
+
